@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title>String</title>	
+</head>
+<body>
+	<script>
+		//charAt();charCodeAt()
+		var str1="hello world";//11位字符
+		console.log(str1.charAt(4));
+		console.log(str1.charCodeAt(1));
+		console.log(str1[1]);		//ECMas 5中新增的！低版本浏览器不支持，可能返回undefined
+
+		//indexOf()
+		console.log(str1.indexOf("o"));
+		console.log(str1.indexOf("z"));
+
+		console.log(str1.lastIndexOf("o"));
+
+		//slice()	截取  substring()   substr()
+		console.log(str1.slice(6,9));
+		console.log(str1.slice(-5,-2));//相当于str1.slice(6,9)
+
+		console.log(str1.substring(-2,1));//负数自动转化为0
+		console.log(str1.substring(2,-2));//自动比较大小
+		console.log("----------------");
+
+		console.log(str1.substr(2,2));
+		console.log(str1.substr(2,-1));//len为负数，返回空字符串
+		console.log(str1.substr(2,0));
+		console.log(str1.substr(-3,2));//start为负数，将传入的负值与字符串的长度相加
+		console.log(str1.substr(-2,-2));
+
+		var str7="welcome-to-beijing";
+		//使用  split()  将str转换为数组
+		var arr=str7.split("-");
+		var str8="2017/7/27";
+		var arr2=str8.split("/");
+		console.log(arr);	//["welcome", "to", "beijing"]
+		console.log(arr2);	//["2017", "7", "27"]
+
+		//替换  replace()
+		var tel="0769-8538,0755-2134,020-12356";
+		var newTel=tel.replace(",","  ");
+		console.log(tel);//replace不会修改tel的值   0769-8538,0755-2134,020-12356
+		console.log(newTel);//0769-8538  0755-2134,020-12356
+
+
+		//toUpperCase()   toLowerCase()
+		var str10="hello world";
+		console.log(str10.toUpperCase());//不会修改原字符串，会产生另外一个副本
+		console.log(str10);
+
+		var str11="WELCOME";
+		console.log(str11.toLowerCase());
+
+		
+	</script>
+</body>
+</html>

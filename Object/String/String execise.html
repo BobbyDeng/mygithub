@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title>String</title>	
+</head>
+<body>
+	<script>
+		//获取扩展名
+		var url="http://www.baidu.com/myfile.txt";
+		//建立函数
+		function typeName(url){
+			var point=url.lastIndexOf(".");
+			return url.substr(point+1);
+		}
+		console.log(typeName(url));
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>lower-upper</title>
+</head>
+<body>
+    <script>
+		//驼峰形式
+		function camelback(str){
+			//通过  -  这个分隔符将 str 拆分成数组
+			var arr=str.split("-");
+			var len=arr.length;
+			var newarr=arr[0];
+			for(var i=1;i<len;i++){
+				var arr2=arr[i].replace(arr[i].charAt(0),arr[i].charAt(0).toUpperCase());
+				console.log(arr2);
+				newarr=newarr.join(arr2);
+				//Error: newarr.join is not a function at camelback
+				console.log(newarr);
+			}
+			//console.log(arr[0].join(newarr));
+			return arr.join("");
+			//在此处使用join， 不如直接遍历数组，将每一项相加
+		}
+		var camelForma=camelback("border-left-color");
+		console.log(camelForma);
+
+	</script>
+</body>
+</html>
