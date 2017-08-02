@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Math</title>
+</head>
+<body>
+    <script>
+		var min=Math.min(5,-4-60,0,9,-55+1,6);
+
+		console.log(min);//-64
+
+		var num=188.5;
+		console.log(Math.ceil(num));
+		console.log(Math.floor(num));
+		console.log(Math.round(num));
+
+		var random=Math.random();
+		console.log(random);
+
+		function getRandom(n,m){
+			var nums=Math.random()*(m-n+1)+n;
+			return Math.floor(nums);
+		}
+		var random1=getRandom(20,99);
+		console.log(random1);
+	</script>
+</body>
+</html>
