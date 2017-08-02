@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//创建一个日期时间对象
+		/*var today=new Date();
+		var weeks=["日","一","二","三","四","五","六"];
+		console.log(today);
+		var year=today.getFullYear();
+			month=today.getMonth()+1;
+			day=weeks[today.getDay()];
+			date=today.getDate();
+			hour=today.getHours();
+			minute=today.getMinutes();
+			second=today.getSeconds();
+		console.log("今天是："+year+"年"+month+"月"+date+"日"+hour+"时"+minute+"分"+second+"秒"+" "+"星期"+day);*/
+
+		//创建一个日期时间对象
+		var today=new Date();
+		// today.setFullYear(2018);
+		// today.setMonth(15);
+		// console.log(today);
+
+		//50天之后是星期几？
+		//第一种做法
+		// today.setDate(today.getDate()+50);
+		// console.log(today.getDay());
+
+		//第二种做法
+		var weeks=["日","一","二","三","四","五","六"],
+			year=today.getFullYear(),
+			month=today.getMonth(),
+			date=today.getDate();
+
+		var temp=new Date(year,month,date+50);
+		console.log(temp);
+		console.log(today);
+		console.log("50天之后是："+temp.getFullYear()+"年"+(temp.getMonth()+1)+"月"+temp.getDate()+"日"+"星期"+weeks[temp.getDay()]);
+	</script>
+</body>
+</html>
