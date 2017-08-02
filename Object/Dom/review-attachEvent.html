@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>execise</title>
+    <style type="text/css">
+    	#title{
+    		color: orange;
+    		background-color: ;
+    	}
+    </style>
+</head>
+<body>
+<div id="header">
+	<p id="title">元素</p>   <!-- HTML事件处理程序 -->
+	<p id="title2" class="content" >这是第一段内容</p>
+	<ul id="list">
+		<li id="first">html 5</li>
+		<li id="second">css3</li>
+		<li>bootstrap</li>
+	</ul>
+</div>
+
+<script>
+
+	var btn=document.getElementById("title");
+	btn.attachEvent("onclick",function(){
+		alert("hello baby");
+	});
+   
+    /*var liii=document.getElementById("second");
+    var function2=function(){
+        alert("hello!!!!!!");
+    };
+    liii.attachEvent("onclick",function1);*/
+    
+
+    //跨浏览器的解决方案
+    EventUtil.Handler(fir,"click",function2);
+
+</script>
+</body>
+</html>

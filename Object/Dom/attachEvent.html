@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Onclick</title>
+</head>
+<body>
+	
+	<p id="box">元素</p>
+	<p id="box2">我是一个段落</p>
+	
+	
+	<script>
+		/*var btn2=document.getElementById("box2");
+		btn2.attachEvent("onclick",function(){
+			alert("hello!!");
+		});*/
+		//不管是用什么浏览器都没办法实现事件效果，
+		//对象不支持attachEvent属性或方法
+		var pfir=document.getElementById("box");
+		pfir.attachEvent("onclick",function(){
+			alert("hello!!!");
+		})
+
+
+
+		
+		/*//DOM2级事件 处理指定处理程序的操作：addEventListener（）
+		
+		btn2.addEventListener("click",function(){
+			alert("hello world");
+		},false);
+
+		btn2.removeEventListener("click",function(){		//没有用
+			alert("hello world");
+		},false);
+
+		//有效的方法
+		var btn=document.getElementById("box");
+		var handler= function(){
+			alert(this.id)
+		};
+		btn.addEventListener("click",handler,false);
+
+		btn.removeEventListener("click",handler,false);*/
+	</script>
+</body>
+</html>

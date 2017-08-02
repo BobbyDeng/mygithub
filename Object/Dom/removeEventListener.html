@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Onclick</title>
+</head>
+<body>
+	
+	<p id="box">元素</p>
+	<p id="box2">我是一个段落</p>
+	
+	
+	<script>
+		
+		//DOM2级事件 处理指定处理程序的操作：addEventListener（）
+		var btn2=document.getElementById("box2");
+		btn2.addEventListener("click",function(){
+			alert("hello world");
+		},false);
+
+		btn2.removeEventListener("click",function(){		//没有用,因为是匿名函数？
+			alert("hello world");
+		},false);
+
+		//有效的方法
+		var btn=document.getElementById("box");
+		var handler= function(){
+			alert(this.id)
+		};
+		btn.addEventListener("click",handler,false);
+
+		btn.removeEventListener("click",handler,false);
+	</script>
+</body>
+</html>

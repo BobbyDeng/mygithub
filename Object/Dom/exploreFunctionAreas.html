@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>With</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="username" value="" />
+
+		<input type="button" value="Echo Username" onclick="alert(username.value)" />
+		
+	</form>
+
+	<script>
+		function(){
+			with(document){
+				with(this.form){
+					with(this){
+						//元素属性值
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dom Document</title>
+</head>
+<body>
+	<div>
+	<p class="box" id="box">元素</p>
+	</div>
+	<ul id="list1">
+	    <li>前端开发</li>
+	    <li>服务器端开发</li>
+	    <li>UI设计</li>
+	</ul>
+	<ol>
+		<li>javaScript原生</li>
+		<li>JavaScript框架</li>
+	</ol>
+<script>
+    //获取id为box的这个元素
+    var box=document.getElementById("box");
+    console.log(box);
+            /*box.onclick=function(){
+                alert(this.id); //"box"
+            };//JavaScript指定事件处理程序*/
+    // document.write(box);
+    box.style.color="#0f0";	//给元素设置样式
+    box.style.fontWeight="bold";
+    //获取页面中所有的li
+    var lis=document.getElementsByTagName("li");
+    console.log(lis);
+    document.write(lis);
+    //获取ID为list1下的所有li
+    var list2=document.getElementById("list1").getElementsByTagName("li");
+    console.log(list2);
+    /*list2.style.color="#0f0";*/	//element必须是Dom元素，list2是数组！
+    //要采用遍历：
+    for(var i=0,len=lis.length;i<len;i++){
+    	lis[i].style.color="#00f";
+    	if(i==0){
+    		lis[i].style.backgroundColor="#ccc";
+    	}else if(i==1){
+    		lis[i].style.backgroundColor="#ff0";
+    	}else if(i==2){
+    		lis[i].style.backgroundColor="#666";
+    	}else {
+    		lis[i].style.backgroundColor="#333";
+    	}
+    }
+
+</script>
+</body>
+</html>

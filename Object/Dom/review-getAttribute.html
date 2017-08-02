@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>execise</title>
+    <style type="text/css">
+    	#title{
+    		color: orange;
+    	}
+    </style>
+</head>
+<body>
+<div id="header">
+	<p id="title">元素</p>
+</div>
+
+<script>
+    var str4=document.getElementsByTagName("p");
+    console.log(str4[0]);
+    var name=str4[0].getAttribute("color");
+    console.log(name);
+    str4[0].setAttribute("color","red");
+</script>
+</body>
+</html>

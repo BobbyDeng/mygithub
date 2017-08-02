@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>addHandler</title>
+</head>
+<body>
+	
+	<p id="box">元素</p>
+	<p id="box2">我是一个段落</p>
+	
+	
+	<script>
+		var btn=document.getElementById("box");
+		var handler=function(){
+			alert("helloooo");
+		}
+		EventUtil.addHandler(btn,"click",handler);
+		// btn.addEventListener("click",handler,false);		//要处理的事件名，作为事件处理程序的函数，布尔值
+	</script>
+</body>
+</html>
