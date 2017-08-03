@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>execise</title>
+    <style type="text/css">
+   		.box{
+   			width: 100%;
+   			height: 300px;
+   		}
+    </style>
+    <script>
+    //页面加载，匿名函数
+    	window.onload=init;
+    	//改为自定义函数，并增强可读性
+    	function init(){
+    		//获取元素节点
+    		var box=document.getElementById("box");
+    		var menu=document.getElementById("menu");
+    		//给菜单绑定change事件，一般作用域 select或checkbox或radio
+    		menu.onchange=function(){
+    			//获取下拉菜单选中的值
+    			// var bgcolor=this.value;	//方法1
+    			var bgcolor=menu.options[menu.selectedIndex].value;  //方法2
+
+    			console.log(bgcolor);
+    			/*//如果bgcolor为空，不执行下面脚本
+    			if(bgcolor=="")return;
+
+    			box.style.backgroundColor=bgcolor;*/
+    			//判断select的值，改变box的颜色属性
+    			if(bgcolor==""){
+    				box.style.backgroundColor="#668899";
+    			}else{
+    				box.style.backgroundColor=bgcolor;
+    			}
+    		}
+    	};
+    	
+	</script>
+</head>
+<body>
+  <div class="box" id="box">
+  	请您选择颜色：
+  	<select name="" id="menu">
+  		<option value="">请选择</option>
+  		<option value="#f00">红色</option>
+  		<option value="#0f0">绿色</option>
+  		<option value="#00f">蓝色</option>
+  		<option value="#ff0">黄色</option>
+  		<option value="#ccc">灰色</option>
+  	</select>
+
+  </div>
+
+</body>
+</html>

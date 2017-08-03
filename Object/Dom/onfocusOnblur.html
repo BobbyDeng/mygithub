@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>execise</title>
+    <style type="text/css">
+    *{padding: 0;
+    	margin: 0;}
+    	.box{
+    		padding: 50px;
+    	}
+    	.left,.right{
+    		float: left;
+    	}
+    	.left{
+    		margin-right: 10px;
+    	}
+    	.right{
+    		display: none;
+    		font-size: 14px;
+    	}
+    </style>
+    <script>
+    	window.onload=function(){
+    		var phone=document.getElementById("number");
+    		var tip=document.getElementById("tip");
+    		//给文本框绑定获得焦点的事件
+    		phone.onfocus=function(){
+    		tip.style.display="block";
+    		};
+    		//给文本框绑定获得焦点的事件
+    		phone.onblur=function(){
+    			//value 获取表单元素的值
+    			var phoneVal=this.value;
+    			//判断表单元素的值是否为11位的数字
+    			//如果正确 显示对号图标，否则 显示错号图标
+    			if(phoneVal.length==11 && isNaN(phoneVal)==false){
+    				console.log("ok");
+    				tip.innerHTML="yes";
+    			}else{
+    				console.log("error");
+    				tip.innerHTML="error";
+    			}
+    		}
+    	};
+	</script>
+</head>
+<body>
+  <div class="box" id="test">
+  	<div class="left" id="phone">
+  		<input type="text" id="number" placeholder="输入手机号" />
+  	</div>
+  	<div class="right" id="tip">
+  		请输入有效的手机号码
+  	</div>
+  </div>
+
+</body>
+</html>

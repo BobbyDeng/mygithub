@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>onchange()</title>
+	    <style type="text/css">
+	    	#div{
+	    		width:300px;
+	    		height:300px;
+	    		border:2px solid gray;
+	    		margin:100px  0  0 200px;
+	    	}
+	    </style>
+	   
+	</head>
+	<body>
+        <div>
+        	<span>请选择您喜欢的颜色:</span>
+        	<select id="color">
+        		<option value="0">请选择</option>
+        		<option value="yellow">黄色</option>
+        		<option value="orange">橘色</option>
+        		<option value="pink">粉色</option>
+        		<option value="purple">紫色</option>
+        	</select>
+        </div>
+		<div id="div">我是div</div>
+	 <script type="text/javascript">
+	       //获取元素节点select、div
+	       var color=document.getElementById("color");
+	       var div=document.getElementById("div");
+	       
+
+	       //给select绑定change事件
+	       color.onchange=function(){
+	       	//获取事件color的value值
+	       	//获取select的value属性值
+	       var colorVal=this.value;
+	       // var colorVal=color.options[color.selectedIndex].value;
+
+	       //设置box对象的属性
+	       if(colorVal=="0"){
+		       	div.innerHTML="我没有发生任何变化";
+		   }else{
+		       	div.innerHTML="我的背景颜色变成了"+colorVal+"色";
+		        div.style.background=colorVal;
+		   }
+	       };
+	    </script>
+ </body>
+</html>

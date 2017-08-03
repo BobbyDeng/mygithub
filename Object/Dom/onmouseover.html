@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+       .lock{width:140px;height:30px;line-height: 30px;background:#00f;
+       	color:#fff;font-size:14px;text-align:center;border-radius:5px;
+       	cursor:pointer;margin-top:30px;}
+       	.unlock{width:140px;height:30px;line-height: 30px;background:#ccc;
+       	color:#fff;font-size:14px;text-align:center;border-radius:5px;
+       	cursor:pointer;margin-top:30px;}
+	</style>
+</head>
+<body>
+	<div id="lock" class="lock">开始</div>
+	<script>
+        var button=document.getElementById("lock");
+        button.onclick=function(){
+        	if(this.className=="lock"){
+        	this.className="unlock";
+        	this.innerHTML="结束";
+        	}else{
+        		this.className="lock";
+        	this.innerHTML="开始";
+        	}
+        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>全选和反选</title>
+</head>
+<body>
+    <input id="btn" type="button" value="全选">
+	<script type="text/javascript">
+	  var btn=document.getElementById("btn");
+	  var clickBtn=function(){		//赋值法建立函数，也可以用函数定义法建立函数function clickBtn（）{};
+	      if(this.value=="全选"){
+	          this.value="反选";
+	      }else{
+	          this.value="全选";
+	      }
+	  };
+	  btn.onclick=clickBtn;		//切记DOM0级事件 调用函数不能加括号
+	</script>
+</body>
+</html>
