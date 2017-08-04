@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>间歇调用</title>
+</head>
+<body>
+	
+	<script>
+		//setInterval(code,millisec)
+		//每隔1秒 打印一次，10秒时结束
+
+		/*var setInterval1=setInterval(function(){
+			console.log("您好");
+		},1000);
+		setTimeout(function(){
+			clearInterval(setInterval1);
+		},10000);*/
+
+
+		//每隔1秒钟num递增一次，直到num的值等于max 清除
+		
+		var num=1,
+			max=10,
+			time=null;
+
+		/*
+		//将setInterval返回的id 赋给timer
+		var timer=setInterval(function(){
+			console.log(num);
+			num++;
+		},1000);
+		//判断num的大小是否达到要求
+		if(num>max){
+			clearInterval(timer);
+		}
+		console.log("ninhao ");*/
+
+		//用超时的形式，实现上面代码
+		function fn(){
+			console.log(num);
+			num++;
+			if(num<=max){
+				setTimeout(fn,1000);
+			}else{
+				clearTimeout(timer);
+			}
+		};
+		timer=setTimeout(fn,1000);
+	</script>
+</body>
+</html>

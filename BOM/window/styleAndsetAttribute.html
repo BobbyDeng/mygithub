@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>用setAttribute设置颜色 与 JavaScript直接设置颜色</title>
+	</head>
+	<body>
+		<input type="button" value="删除" id="btn">
+		<div id="header">
+			<p id="title">元素</p>
+		</div>
+		<script type="text/javascript">
+			//获取按钮，绑定事件
+			var btn=document.getElementById("btn");
+			btn.onclick=function(){
+			    var con=window.confirm("确定要删除么？");
+			    if(con){
+			    	//JavaScript直接设置颜色
+			    	//在控制台中打印DOM对象，不会显示任何变化
+			    	//并且，样式表也不会有任何变化
+			        btn.style.color="red";
+			        console.log(btn);
+			    }else{
+			        btn.style.color="green";
+			    };
+			};
+
+			//用setAttribute设置颜色, 
+			//在控制台中打印DOM对象，会看到我们刚刚设置的属性值
+			var p=document.getElementById("title");
+			p.setAttribute("style","color:orange");
+			console.log(p);
+		</script>
+	</body>
+</html>

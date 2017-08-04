@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文本每0.5秒互相切换一次</title>
+	<style type="text/css">
+            div{
+                width:200px;
+                height:200px;
+                line-height:200px;
+                border:2px solid gray;
+                text-align:center;
+                color:red;
+            }
+    </style>
+</head>
+<body>
+    <h3>会闪烁的文字</h3>
+    <div id="text"> </div>
+<script type="text/javascript">
+	//获取div文本框对象
+    var box=document.getElementById("text"),
+    //定义变量，接受闪烁值
+    	num=0;
+    //当闪烁值为0，将值设为1，显示文本0，  当闪烁值为1，将值设为0，显示文本1
+    var fn=function(){
+    	if(num==0){
+    		num=1;
+    		// box.innerHTML("☆☆☆今日特卖☆☆☆"); //错误的语法
+    		box.innerHTML="☆☆☆今日特卖☆☆☆"
+    		// console.log(box);
+    	}else{
+    		num=0;
+    		box.innerHTML="★★★今日特卖★★★";
+    	}
+    }
+    setInterval(fn,500);
+
+</script>
+</body>
+</html>

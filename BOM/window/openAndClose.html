@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>open和close</title>
+	</head>
+	<body>
+		<input type="button" value="退出" id="quit">
+		<script type="text/javascript">
+
+			window.onload=function(){
+				//打开子窗口，显示newwindow.html
+				window.open("newWindow.html","newwindow","width=400,height=200,left=0,top=0,toolbar=no,menubar=no,scrollbars=no,location=no,status=no");
+
+				//关闭窗口
+				var quit=document.getElementById("quit");
+				//点击关闭当前窗口
+				quit.onclick=function(){
+					window.close();
+				}
+			}
+			
+		</script>
+	</body>
+</html>

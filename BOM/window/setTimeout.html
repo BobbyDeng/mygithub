@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>超时调用</title>
+</head>
+<body>
+	
+	<script>
+		//setTimeout定时器  
+		/*setTimeout("alert('hello')",4000);*/
+		//直接写JavaScript代码串，是不推荐的，因为这样比较低效
+
+		//用匿名函数
+		var timeout1=setTimeout(function(){
+			alert("world");
+		},2000);
+
+		//用自动以函数
+		/*var fnCall=function(){
+			alert("helloooo");
+		}
+		setTimeout(fnCall,4000);*/
+
+		clearTimeout(timeout1);
+	</script>
+</body>
+</html>
