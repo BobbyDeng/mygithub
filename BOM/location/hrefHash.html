@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>location.href .hash</title>
+	<style type="text/css">
+            
+    </style>
+</head>
+<body>
+
+    <input type="button" id="btn" value="返回顶部">
+<script type="text/javascript">
+	console.log(location.href);
+	console.log(location.hash);
+	var btn=document.getElementById("btn");
+	btn.onclick=function(){
+		location.hash="#top";
+	}
+</script>
+</body>
+</html>

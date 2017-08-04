@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>replace</title>
+	<style type="text/css">
+            
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+	setTimeout(function(){
+		//跳转页面的两种方法
+
+		//location.href="hrefHash.html";
+		//window.location="hrefHash.html";
+		//以上两种最常用
+
+		//location="hrefHash.html";//错误？
+		//以上三个效果都一样
+
+		//不留下历史记录，不允许返回
+		location.replace("hrefHash.html");
+	},2000);
+</script>
+</body>
+</html>

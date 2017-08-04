@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Execise</title>
+	<style type="text/css">
+            
+    </style>
+</head>
+<body>
+		<input type="button" value="操作页面" id="ck">
+<script type="text/javascript">
+    var btn=document.getElementById("ck");
+    btn.onclick=function(){
+    	var n=confirm("刷新页面么？");
+    	if(n){
+    		location.reload(true);
+    	}else{
+    		location.replace("http://www.imooc.com/");
+    	}
+    }
+</script>
+</body>
+</html>
